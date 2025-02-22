@@ -1,0 +1,3 @@
+[submodule "GENIE3"]
+	path = GENIE3
+	url = https://github.com/vahuynh/GENIE3
