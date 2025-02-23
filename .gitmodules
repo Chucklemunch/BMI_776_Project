@@ -1,3 +1,6 @@
 [submodule "GENIE3"]
 	path = GENIE3
 	url = https://github.com/vahuynh/GENIE3
+[submodule "NetworkInference.jl"]
+	path = NetworkInference.jl
+	url = https://github.com/Tchanders/NetworkInference.jl
