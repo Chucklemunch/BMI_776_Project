@@ -5,3 +5,13 @@
 *.pickle filter=lfs diff=lfs merge=lfs -text
 *.tsv.gz filter=lfs diff=lfs merge=lfs -text
 *.rds filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/seurat filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/cluster filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/expression filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/file_supplemental_info.tsv filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/metadata filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/expression/rs1.rs2.combined.counts.tsv.gz filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/expression/rs1.rs2.combined.data.tsv.gz filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/metadata/metadata_AllRabies.tsv filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/seurat/rs1.rs2.combined.rds filter=lfs diff=lfs merge=lfs -text
+Data/SCP2797/cluster/rs1.rs2.combined.umap.scp.tsv filter=lfs diff=lfs merge=lfs -text
