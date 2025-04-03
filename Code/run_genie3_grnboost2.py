@@ -63,12 +63,32 @@ def run_genie3(data_path, gene_names_path):
 
     return
     
-
-# For Livvy
+# GRNBoost2
 def run_grnboost2():
     """
     Run GRNBoost2 algorithm
     """
+    # Load data
+    with open(data_path, 'rb') as f:
+        data = pickle.load(f)
+
+    # Get gene names
+    with open(gene_names_path, 'rb') as f:
+        gene_names = pickle.load(f)
+        num_genes = len(gene_names)
+        
+    #### Testing on just 10 genes
+    data = data[:10, :]
+    # print('data.shape: ', data.shape)
+    gene_names = gene_names[:10]
+    num_genes = len(gene_names)
+    # print(gene_names)
+    
+
+    # Run GRNBoost2 to get regulatory link scores matrix 
+    # M(i,j) is the weight of link from i-th gene to j-th gene
+    M = grnboost2(expression_data=data.T, gene_names=gene_names)
+    print(M)
     print('hi')
     return
     
