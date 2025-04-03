@@ -11,8 +11,8 @@ from GENIE3 import GENIE3, get_link_list
 from arboreto.algo import grnboost2
 
 ### Specify configuration
-data_path = '../Data/highly_variable_expression_matrix_503.pickle'
-gene_names_path = '../Data/highly_variable_genes_503.pickle'
+data_path = '../Data/SARS-CoV-2/highly_variable_expression_matrix_503.pickle'
+gene_names_path = '../Data/SARS-CoV-2/highly_variable_genes_503.pickle'
 
 def print_usage():
     # Print usage of script for user
@@ -49,17 +49,17 @@ def run_genie3(data_path, gene_names_path):
 
     # Run GENIE3 to get regulatory link scores matrix 
     # M(i,j) is the weight of link from i-th gene to j-th gene
-    M = GENIE3(data, gene_names=gene_names)
+    M = GENIE3(data.T, gene_names=gene_names)
     print(M)
 
     # Output resulting matrix
-    with open(f'../Results/GENIE3/reg_link_matrix_{num_genes}.pickle', 'wb') as f:
+    with open(f'../Results/GENIE3/SARS-CoV-2/reg_link_matrix_{num_genes}.pickle', 'wb') as f:
         pickle.dump(M, f)
 
     # Get list of ranked predictions
     ranked_preds = get_link_list(M, 
                                  gene_names=gene_names, 
-                                 file_name=f'../Results/GENIE3/ranked_interaction_list_{num_genes}.pickle')
+                                 file_name=f'../Results/GENIE3/SARS-CoV-2/ranked_interaction_list_{num_genes}.txt')
 
     return
     
