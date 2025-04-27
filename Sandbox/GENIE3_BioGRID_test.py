@@ -40,6 +40,7 @@ for index, row in top_df.iterrows():
     gene1, gene2 = row['TF'], row['target']
     found = query_biogrid(gene1, gene2)
     if found:
+        print('Found: ', gene1, gene2)
         verified_count += 1
     time.sleep(1)  # API rate limits
 
