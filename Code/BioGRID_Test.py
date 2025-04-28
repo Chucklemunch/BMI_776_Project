@@ -45,7 +45,10 @@ for algo, file_path in file_paths.items():
     df = pd.read_csv(file_path, sep="\t")
     
     # sort by importance + keep top 100
-    top_df = df.sort_values(by="importance", ascending=False).head(100)
+    # top_df = df.sort_values(by="importance", ascending=False).head(100)
+
+    # sort by importance + keep top 100
+    top_df = df.sort_values(by="importance", ascending=False).head(500)
     
     # BioGRID API setup 
     BIOGRID_ACCESS_KEY = "a207ffa23db79e55a7d7a5a69b79f0c9"
@@ -92,5 +95,5 @@ for algo, file_path in file_paths.items():
 print(found_interactions)
 
 # Output results
-with open('../Results/found_interactions_dict.pickle', 'wb') as f:
+with open('../Results/found_interactions_dict_500.pickle', 'wb') as f:
     pickle.dump(found_interactions, f)
