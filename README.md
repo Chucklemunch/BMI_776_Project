@@ -1,5 +1,8 @@
 # BMI_776_Project
 
+## Project Description
+We compared the Gene Co-Expression Network (GCN) inference algorithms: GENIE3, GRNBoost2, PIDC. *Note: While the algorithms are generally referred to as Gene Regulatory Network (GRN) inference algorithms, we did not use any information regarding transcription factors, so all interactions were predicted purely based on gene expression (and therefore co-expression) information.*
+
 ## Description of Folders and Files
 Below describes the directories and some of the files contained within our project repository. We briefly describe each script and notebook used in our project, but do not expand upon all pickle or CSV files used in our analyses.
 
